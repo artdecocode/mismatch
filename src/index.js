@@ -1,5 +1,5 @@
 /**
- * A JavaScript package to return captured groups of a regular expression as an object.
+ * A JavaScript package to return captured groups of a regular expression as an object. Does not modify the `lastIndex` property of the regex.
  * @param {RegExp} re The regular expression used for matching.
  * @param {string} string String to find matches in.
  * @param {string[]} keys Keys to use to create an captured group object.
