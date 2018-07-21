@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/mismatch.svg)](https://npmjs.org/package/mismatch)
 
-`mismatch` is a JavaScript package to return captured groups of a regular expression as an object in an array.
+`mismatch` is a JavaScript package to return captured groups of a regular expression as objects in an array.
 
 ```sh
 yarn add -E mismatch
