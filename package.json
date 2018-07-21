@@ -26,7 +26,16 @@
     "url": "git://github.com/artdecocode/mismatch.git"
   },
   "keywords": [
-    "mismatch"
+    "mismatch",
+    "regex",
+    "regexp",
+    "re",
+    "exec",
+    "replace",
+    "regular",
+    "expression",
+    "match",
+    "regular expression"
   ],
   "author": "Anton <anton@adc.sh>",
   "license": "MIT",
