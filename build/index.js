@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports.default = mismatch;
 
 /**
  * Returns an array of captured groups of a regular expression as objects. Does not modify the `lastIndex` property of the regex.
@@ -46,7 +46,4 @@ function mismatch(re, string, keys) {
   });
   return m;
 }
-
-var _default = mismatch;
-exports.default = _default;
 //# sourceMappingURL=index.js.map

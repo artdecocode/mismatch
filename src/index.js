@@ -23,7 +23,7 @@
  *  },
  * ]
  */
-function mismatch(re, string, keys) {
+export default function mismatch(re, string, keys) {
   /** @type {Object.<string, string>[]} */
   const m = []
   string.replace(re, (match, ...args) => {
@@ -38,5 +38,3 @@ function mismatch(re, string, keys) {
   })
   return m
 }
-
-export default mismatch
