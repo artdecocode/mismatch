@@ -1,21 +1,22 @@
-import { debuglog } from 'util'
-
-const LOG = debuglog('mismatch')
-
 /**
  * A JavaScript package to return captured groups of a regular expression as an object.
- * @param {Config} config Configuration object.
- * @param {string} config.type The type.
+ * @param {RegExp} re The regular expression used for matching.
+ * @param {string} string String to find matches in.
+ * @param {string[]} keys Keys to use to create an captured group object.
  */
-export default async function mismatch(config = {}) {
-  const {
-    type,
-  } = config
-  LOG('mismatch called with %s', type)
-  return type
+function mismatch(re, string, keys) {
+  const m = []
+  string.replace(re, (match, ...args) => {
+    const p = args.slice(0, args.length - 2) // remove position and input
+    const o = p.reduce((acc, capturedGroup, i) => {
+      const key = keys[i]
+      if (!(key && capturedGroup)) return acc
+      acc[key] = capturedGroup
+      return acc
+    }, {})
+    m.push(o)
+  })
+  return m
 }
 
-/**
- * @typedef {Object} Config
- * @property {string} type The type.
- */
+export default mismatch
