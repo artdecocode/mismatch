@@ -19,4 +19,10 @@ The function will attempt to find all matches for a given regular expression in 
 
 %EXAMPLE: example/example.js, ../src => mismatch, javascript%
 
-%FORK-json example example/example.js%
+%FORK-json example example/example%
+
+If an optional capturing group was not found, its key will not be included as part of the object. Also, if there are more captured groups than keys, they will also not be included.
+
+%EXAMPLE: example/extra.js, ../src => mismatch, javascript%
+
+%FORK-json example example/extra%

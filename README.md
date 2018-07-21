@@ -60,6 +60,33 @@ console.log(JSON.stringify(res, null, 2))
 ]
 ```
 
+If an optional capturing group was not found, its key will not be included as part of the object. Also, if there are more captured groups than keys, they will also not be included.
+
+```javascript
+/* yarn example/extra.js */
+import mismatch from 'mismatch'
+
+const re = /(?: type="(.+?)")?\s+crossorigin="(.+?)"\s+src="(.+?)"/g
+const string = `
+<script
+  crossorigin="anonymous"
+  src="https://static.npmjs.com/commons.js"
+  integrity="sha512-example/rhb92Zdom+ix+AYtqZ7C1DlLKEA=="
+></script>
+`
+const keys = ['type', 'crossorigin']
+const res = mismatch(re, string, keys)
+console.log(JSON.stringify(res, null, 2))
+```
+
+```json
+[
+  {
+    "crossorigin": "anonymous"
+  }
+]
+```
+
 ---
 
 (c) [Art Deco][1] 2018
