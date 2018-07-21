@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/mismatch.svg)](https://npmjs.org/package/mismatch)
 
-`mismatch` is a new Node.js npm package. A JavaScript package to return captured groups of a regular expression as an object.
+`mismatch` is a JavaScript package to return captured groups of a regular expression as an object in an array.
 
 ```sh
 yarn add -E mismatch
@@ -12,7 +12,7 @@ yarn add -E mismatch
 
 - [Table Of Contents](#table-of-contents)
 - [API](#api)
-  * [`mismatch(arg1: string, arg2?: boolean)`](#mynewpackagearg1-stringarg2-boolean-void)
+  * [`mismatch(re: RegExp, string: string, keys: string[])`](#mismatchre-regexpstring-stringkeys-string-void)
 
 ## API
 
@@ -22,17 +22,42 @@ The package is available by importing its default function:
 import mismatch from 'mismatch'
 ```
 
-### `mismatch(`<br/>&nbsp;&nbsp;`arg1: string,`<br/>&nbsp;&nbsp;`arg2?: boolean,`<br/>`): void`
+### `mismatch(`<br/>&nbsp;&nbsp;`re: RegExp,`<br/>&nbsp;&nbsp;`string: string,`<br/>&nbsp;&nbsp;`keys: string[],`<br/>`): void`
 
-Call this function to get the result you want.
+The function will attempt to find all matches for a given regular expression in a string using `.replace()` method, construct an object consisting of captured groups based on supplied keys, and return those objects as an array. It has an advantage over iterating over `while(RegExp.exec(string))` pattern because it does not modify the regular expression's `lastIndex` property.
 
-```js
-/* yarn example */
+```javascript
+/* yarn example/ */
 import mismatch from 'mismatch'
 
-(async () => {
-  await mismatch()
-})()
+const re = /(\w+)="(.+?)"/g
+const string = `
+<script
+  crossorigin="anonymous"
+  src="https://static.npmjs.com/commons.js"
+  integrity="sha512-example/rhb92Zdom+ix+AYtqZ7C1DlLKEA=="
+></script>
+`
+const keys = ['attribute', 'value']
+const res = mismatch(re, string, keys)
+console.log(JSON.stringify(res, null, 2))
+```
+
+```json
+[
+  {
+    "attribute": "crossorigin",
+    "value": "anonymous"
+  },
+  {
+    "attribute": "src",
+    "value": "https://static.npmjs.com/commons.js"
+  },
+  {
+    "attribute": "integrity",
+    "value": "sha512-example/rhb92Zdom+ix+AYtqZ7C1DlLKEA=="
+  }
+]
 ```
 
 ---
