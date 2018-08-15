@@ -16,7 +16,7 @@
     "example/": "yarn e example/example.js",
     "example/extra.js": "yarn e example/extra",
     "build": "yarn-s b doc",
-    "b": "b --source-maps"
+    "b": "alamode src -o build"
   },
   "files": [
     "build"
@@ -44,6 +44,7 @@
   },
   "homepage": "https://github.com/artdecocode/mismatch#readme",
   "devDependencies": {
+    "alamode": "1.1.0",
     "documentary": "1.10.0",
     "eslint-config-artdeco": "1.0.1",
     "yarn-s": "1.1.0",
