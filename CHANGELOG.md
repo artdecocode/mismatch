@@ -1,3 +1,9 @@
+## 17 September 2018
+
+### 1.0.3
+
+- [fix] Make sure that empty strings are also returned as part of the object.
+
 ## 15 August 2018
 
 ### 1.0.2
