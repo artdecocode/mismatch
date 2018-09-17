@@ -44,10 +44,10 @@
   },
   "homepage": "https://github.com/artdecocode/mismatch#readme",
   "devDependencies": {
-    "alamode": "1.1.0",
-    "documentary": "1.10.0",
+    "alamode": "1.5.0",
+    "documentary": "1.16.1",
     "eslint-config-artdeco": "1.0.1",
     "yarn-s": "1.1.0",
-    "zoroaster": "2.1.0"
+    "zoroaster": "3.3.0"
   }
 }
