@@ -23,14 +23,14 @@
  *  },
  * ]
  */
-function mismatch(re, string, keys) {
+               function mismatch(re, string, keys) {
   /** @type {Object.<string, string>[]} */
   const m = []
   string.replace(re, (match, ...args) => {
     const p = args.slice(0, args.length - 2) // remove position and input
     const o = p.reduce((acc, capturedGroup, i) => {
       const key = keys[i]
-      if (!(key && capturedGroup)) return acc
+      if (!(key && capturedGroup !== undefined)) return acc
       acc[key] = capturedGroup
       return acc
     }, {})
@@ -40,3 +40,4 @@ function mismatch(re, string, keys) {
 }
 
 module.exports = mismatch
+//# sourceMappingURL=index.js.map
