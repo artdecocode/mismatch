@@ -50,6 +50,19 @@ const T = {
       },
     ])
   },
+  'adds empty value'() {
+    const re = /(test) inside of a (string)(\d*)/i
+    const s = 'Test inside of a STRING.'
+    const keys = ['test', 'string', 'number']
+    const res = mismatch(re, s, keys)
+    deepEqual(res, [
+      {
+        test: 'Test',
+        string: 'STRING',
+        number: '',
+      },
+    ])
+  },
   'ignores missing keys'() {
     const re = /(test)/i
     const s = 'Test inside of a STRING1.'

@@ -30,7 +30,7 @@ export default function mismatch(re, string, keys) {
     const p = args.slice(0, args.length - 2) // remove position and input
     const o = p.reduce((acc, capturedGroup, i) => {
       const key = keys[i]
-      if (!(key && capturedGroup)) return acc
+      if (!(key && capturedGroup !== undefined)) return acc
       acc[key] = capturedGroup
       return acc
     }, {})

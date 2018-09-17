@@ -1,4 +1,3 @@
-
 ## API
 
 The package is available by importing its default function:
@@ -26,3 +25,5 @@ If an optional capturing group was not found, its key will not be included as pa
 %EXAMPLE: example/extra.js, ../src => mismatch, javascript%
 
 %FORK-json example example/extra%
+
+%~%
