@@ -8,11 +8,17 @@
 yarn add -E mismatch
 ```
 
+<p align="center"><a href="#table-of-contents"><img src=".documentary/section-breaks/0.svg?sanitize=true"></a></p>
+
 ## Table Of Contents
 
 - [Table Of Contents](#table-of-contents)
 - [API](#api)
   * [`mismatch(re: RegExp, string: string, keys: string[])`](#mismatchre-regexpstring-stringkeys-string-void)
+- [TODO](#todo)
+- [Copyright](#copyright)
+
+<p align="center"><a href="#table-of-contents"><img src=".documentary/section-breaks/1.svg?sanitize=true"></a></p>
 
 ## API
 
@@ -87,8 +93,16 @@ console.log(JSON.stringify(res, null, 2))
 ]
 ```
 
----
+<p align="center"><a href="#table-of-contents"><img src=".documentary/section-breaks/2.svg?sanitize=true"></a></p>
+
+## TODO
+
+- [ ] Add an item to the todo list.
+
+## Copyright
 
 (c) [Art Deco][1] 2018
 
 [1]: https://artdeco.bz
+
+<p align="center"><a href="#table-of-contents"><img src=".documentary/section-breaks/-1.svg?sanitize=true"></a></p>
