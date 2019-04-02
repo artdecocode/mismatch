@@ -1,11 +1,7 @@
-## TODO
-
-- [ ] Add an item to the todo list.
-
 ## Copyright
 
-(c) [Art Deco][1] 2018
+(c) [Art Deco][1] 2019
 
-[1]: https://artdeco.bz
+[1]: https://artd.eco
 
 %~ -1%

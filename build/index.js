@@ -40,4 +40,3 @@
 }
 
 module.exports = mismatch
-//# sourceMappingURL=index.js.map

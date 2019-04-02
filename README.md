@@ -15,7 +15,6 @@ yarn add -E mismatch
 - [Table Of Contents](#table-of-contents)
 - [API](#api)
   * [`mismatch(re: RegExp, string: string, keys: string[])`](#mismatchre-regexpstring-stringkeys-string-void)
-- [TODO](#todo)
 - [Copyright](#copyright)
 
 <p align="center"><a href="#table-of-contents"><img src=".documentary/section-breaks/1.svg?sanitize=true"></a></p>
@@ -32,7 +31,7 @@ import mismatch from 'mismatch'
 
 The function will attempt to find all matches for a given regular expression in a string using `.replace()` method, construct an object consisting of captured groups based on supplied keys, and return those objects as an array. It has an advantage over iterating over `while(RegExp.exec(string))` pattern because it does not modify the regular expression's `lastIndex` property.
 
-```javascript
+```js
 /* yarn example/ */
 import mismatch from 'mismatch'
 
@@ -68,7 +67,7 @@ console.log(JSON.stringify(res, null, 2))
 
 If an optional capturing group was not found, its key will not be included as part of the object. Also, if there are more captured groups than keys, they will also not be included.
 
-```javascript
+```js
 /* yarn example/extra.js */
 import mismatch from 'mismatch'
 
@@ -95,14 +94,10 @@ console.log(JSON.stringify(res, null, 2))
 
 <p align="center"><a href="#table-of-contents"><img src=".documentary/section-breaks/2.svg?sanitize=true"></a></p>
 
-## TODO
-
-- [ ] Add an item to the todo list.
-
 ## Copyright
 
-(c) [Art Deco][1] 2018
+(c) [Art Deco][1] 2019
 
-[1]: https://artdeco.bz
+[1]: https://artd.eco
 
 <p align="center"><a href="#table-of-contents"><img src=".documentary/section-breaks/-1.svg?sanitize=true"></a></p>
