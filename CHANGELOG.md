@@ -1,3 +1,9 @@
+## 2 April 2019
+
+### [1.1.0](https://github.com/artdecocode/mismatch/compare/v1.0.3...v1.1.0)
+
+- [package] Add the `module` field.
+
 ## 17 September 2018
 
 ### 1.0.3
