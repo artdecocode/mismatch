@@ -74,6 +74,18 @@ const T = {
       },
     ])
   },
+  'adds position'() {
+    const re = /(test)/i
+    const s = 'Test inside of a STRING1.'
+    const keys = ['test', 'hello', 'world', 'position']
+    const res = mismatch(re, s, keys, true)
+    deepEqual(res, [
+      {
+        test: 'Test',
+        position: 0,
+      },
+    ])
+  },
   'finds multiple matches'() {
     const re = /(test) inside of a (string)(\d)?/ig
     const s = 'Test inside of a STRING1. TEST inside of a string.'
