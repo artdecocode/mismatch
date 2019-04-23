@@ -5,7 +5,7 @@
 `mismatch` is a JavaScript package to return captured groups of a regular expression as objects in an array.
 
 ```sh
-yarn add -E mismatch
+yarn add mismatch
 ```
 
 <p align="center"><a href="#table-of-contents"><img src=".documentary/section-breaks/0.svg?sanitize=true"></a></p>

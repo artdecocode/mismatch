@@ -1,3 +1,9 @@
+## 23 April 2019
+
+### [1.2.0](https://github.com/artdecocode/mismatch/compare/v1.1.1...v1.2.0)
+
+- [feature] Add the `addPositions` argument to return the positions of matches.
+
 ## 8 April 2019
 
 ### [1.1.1](https://github.com/artdecocode/mismatch/compare/v1.1.0...v1.1.1)
