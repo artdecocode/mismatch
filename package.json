@@ -1,6 +1,6 @@
 {
   "name": "mismatch",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "A JavaScript package to return captured groups of a regular expression as an object.",
   "main": "build/index.js",
   "module": "src/index.js",
