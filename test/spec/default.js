@@ -75,14 +75,15 @@ const T = {
     ])
   },
   'adds position'() {
-    const re = /(test)/i
-    const s = 'Test inside of a STRING1.'
-    const keys = ['test', 'hello', 'world', 'position']
+    const re = /(test).+?(string)/i
+    const s = 'The Test inside of a STRING1.'
+    const keys = ['test', 'string']
     const res = mismatch(re, s, keys, true)
     deepEqual(res, [
       {
         test: 'Test',
-        position: 0,
+        string: 'STRING',
+        position: 4,
       },
     ])
   },

@@ -11,11 +11,8 @@
       "program": "${workspaceFolder}/node_modules/.bin/zoroaster",
       "console": "integratedTerminal",
       "args": [
-        "test/spec",
-        "-b",
-        "-w",
-        "-t",
-        "9999999"
+        "test/spec", "-a",
+        "-w", "-t", "9999999"
       ],
       "skipFiles": [
         "<node_internals>/**/*.js"
